@@ -1,8 +1,9 @@
-const http = require('http')
+const http = require('http');
+const hello = require('./helloWorld');
 const server = http.createServer((req, res) => {
     res.statusCode= 200;
     res.setHeader('Content-Type', 'text/plain');
-    res.write('Hello World');
+    res.write(hello.hello());
     res.end();
 })
 
